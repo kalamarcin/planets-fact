@@ -1,0 +1,29 @@
+//var
+:root {
+  --background-color: #070724;
+  --font-antonio: 'Antonio', sans-serif;
+  --font-spartan: 'League Spartan', sans-serif;
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+html {
+  
+  min-height: 100%;
+  background-image: url("../assets/background-stars.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+}
+
+body {
+  min-height: 100%;
+  font-family: var(--font-antonio);
+}
