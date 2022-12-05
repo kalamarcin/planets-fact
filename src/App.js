@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 //pages
 
 import Home from './Pages/Home/Home'
@@ -14,18 +14,21 @@ import Neptune from './Pages/Neptune/Neptune'
 import './styles/App.scss'
 import './styles/Header.scss'
 import Navbar from './Components/navbar/Navbar'
-
+import Mobilenav from './Components/navbar/Mobilenav'
 
 const App = () => {
   return (
-    
-
     <div className="app">
       <div className="header">
-        <h1 className='title'>THE PLANETS</h1>
+        <h1 className="title">
+          <Link to="/" element={<Home />}>
+            THE PLANETS
+          </Link>
+        </h1>
         <Navbar />
       </div>
       <Routes>
+        <Route path="/mobile" element={<Mobilenav />} />
         <Route path="/" element={<Home />} />
         <Route path="/mercury" element={<Mercury />} />
         <Route path="/venus" element={<Venus />} />
@@ -35,10 +38,8 @@ const App = () => {
         <Route path="/saturn" element={<Saturn />} />
         <Route path="/uranus" element={<Uranus />} />
         <Route path="/neptune" element={<Neptune />} />
-
       </Routes>
     </div>
-    
   )
 }
 
