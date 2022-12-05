@@ -22,7 +22,7 @@ const App = () => {
 
     <div className="app">
       <div className="header">
-        <h1>THE PLANETS</h1>
+        <h1 className='title'>THE PLANETS</h1>
         <Navbar />
       </div>
       <Routes>
