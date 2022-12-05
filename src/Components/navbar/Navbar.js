@@ -5,6 +5,7 @@ import { useContext } from 'react'
 import { GlobalStoreContext } from '../../Store/GlobalStore'
 import { useNavigate } from 'react-router-dom'
 import * as MdOutlineClose from 'react-icons/md'
+import Navigation from './Navigation'
 // import data from '../../data.json'
 
 const Navbar = () => {
@@ -22,7 +23,8 @@ const Navbar = () => {
 
   return (
     <>
-      <Link to="/mobile">
+    
+      <Link to="/mobile" className='burgerMenu'>
         {!GlobalStore.sidebar && <FaIcons.FaBars onClick={showSidebar} className="hamburger" />}
         {GlobalStore.sidebar && <MdOutlineClose.MdOutlineClose onClick={closeSidebar} className="close" />}
       </Link>

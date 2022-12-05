@@ -17,6 +17,7 @@ import './styles/App.scss'
 import './styles/Header.scss'
 import Navbar from './Components/navbar/Navbar'
 import Mobilenav from './Components/navbar/Mobilenav'
+import Navigation from './Components/navbar/Navigation'
 
 const App = () => {
   const GlobalStore = useContext(GlobalStoreContext)
@@ -32,6 +33,7 @@ const App = () => {
             THE PLANETS
           </Link>
         </h1>
+        <Navigation />
         <Navbar />
       </div>
       <Routes>
