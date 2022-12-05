@@ -1,20 +1,30 @@
-// import { Link } from 'react-router-dom'
 import './Navbar.scss'
 import * as FaIcons from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-// import * as AiIcons from 'react-icons/ai';
-// import { useState } from 'react';
+import { useContext } from 'react'
+import { GlobalStoreContext } from '../../Store/GlobalStore'
+import { useNavigate } from 'react-router-dom'
+import * as MdOutlineClose from 'react-icons/md'
 // import data from '../../data.json'
 
 const Navbar = () => {
-  // const [sidebar, setSidebar] = useState(false)
+  const GlobalStore = useContext(GlobalStoreContext)
+  const navigate = useNavigate()
 
-  // const showSidebar = () => setSidebar(!sidebar)
+  const showSidebar = () => {
+    GlobalStore.changeSidebar()
+  }
+
+  const closeSidebar = () => {
+    GlobalStore.changeSidebar()
+    navigate(-1)
+  }
 
   return (
     <>
       <Link to="/mobile">
-        <FaIcons.FaBars className="hamburger" />
+        {!GlobalStore.sidebar && <FaIcons.FaBars onClick={showSidebar} className="hamburger" />}
+        {GlobalStore.sidebar && <MdOutlineClose.MdOutlineClose onClick={closeSidebar} className="close" />}
       </Link>
     </>
   )

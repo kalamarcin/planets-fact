@@ -1,4 +1,6 @@
 import { Link, Route, Routes } from 'react-router-dom'
+import { useContext } from 'react'
+import { GlobalStoreContext } from './Store/GlobalStore'
 //pages
 
 import Home from './Pages/Home/Home'
@@ -17,11 +19,16 @@ import Navbar from './Components/navbar/Navbar'
 import Mobilenav from './Components/navbar/Mobilenav'
 
 const App = () => {
+  const GlobalStore = useContext(GlobalStoreContext)
+
+  const changeSidebarState = () => {
+    GlobalStore.handleFalse()
+  }
   return (
     <div className="app">
       <div className="header">
         <h1 className="title">
-          <Link to="/" element={<Home />}>
+          <Link to="/" onClick={changeSidebarState}>
             THE PLANETS
           </Link>
         </h1>
