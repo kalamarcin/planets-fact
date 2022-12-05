@@ -1,9 +1,26 @@
 .galaxy {
+    
   height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
+  .stars {
+    position: relative;
+    width: 100%;
+    opacity: 0.3;
+    animation: spin 80s linear infinite;
+  }
 
   .sun {
+    position: absolute;
+    height: 80px;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
