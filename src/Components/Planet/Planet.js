@@ -1,11 +1,7 @@
 import { useState } from 'react'
-import { data } from './data'
-import './Mercury.scss'
-import mercuryAll from '../../assets/planet-mercury.svg'
-import mercuryHalf from '../../assets/planet-mercury-internal.svg'
-import mercuryInside from '../../assets/geology-mercury.png'
+import './Planet.scss'
 
-const Mercury = () => {
+const Planet = props => {
   const [overview, setOverview] = useState(true)
   const [structure, setStructure] = useState(false)
   const [surface, setSurface] = useState(false)
@@ -30,33 +26,33 @@ const Mercury = () => {
     <>
       <div className="planet-grid">
         <div className="planet-nav">
-          <button className={overview ? 'active' : ''} onClick={changeClass1}>
+          <button className={overview ? `${props.className}` : ''} onClick={changeClass1}>
             OVERVIEW
           </button>
-          <button className={structure ? 'active' : ''} onClick={changeClass2}>
+          <button className={structure ? `${props.className}` : ''} onClick={changeClass2}>
             STRUCTURE
           </button>
-          <button className={surface ? 'active' : ''} onClick={changeClass3}>
+          <button className={surface ? `${props.className}` : ''} onClick={changeClass3}>
             SURFACE
           </button>
         </div>
         <div className="img-wrapper">
-          {overview && <img src={mercuryAll} alt="" />}
-          {structure && <img src={mercuryHalf} alt="" />}
-          {surface && <img className='inide-img' src={mercuryAll} alt="" />}
-          {surface && <img className='inside-all' src={mercuryInside} alt="" />}
+          {overview && <img src={props.imgAll} alt="" />}
+          {structure && <img src={props.imgHalf} alt="" />}
+          {surface && <img className="inide-img" src={props.imgAll} alt="" />}
+          {surface && <img className="inside-all" src={props.imgInside} alt="" />}
         </div>
         <div className="title">
-          <h1>{data.name.toUpperCase()}</h1>
+          <h1>{props.data.name}</h1>
         </div>
         <div className="desc">
-          {overview && <h2>{data.overview.content}</h2>}
-          {structure && <h2>{data.structure.content}</h2>}
-          {surface && <h2>{data.geology.content}</h2>}
+          {overview && <h2>{props.data.overview.content}</h2>}
+          {structure && <h2>{props.data.structure.content}</h2>}
+          {surface && <h2>{props.data.geology.content}</h2>}
           <h2 className="source">
             Source :
             <span>
-              <a href={data.overview.source}> Wikipedia</a>
+              <a href={props.data.overview.source}> Wikipedia</a>
             </span>
           </h2>
         </div>
@@ -64,23 +60,23 @@ const Mercury = () => {
       <div className="stats-grid">
         <div className="border-stats">
           <h3>ROTATION TIME</h3>
-          <p>{data.rotation}</p>
+          <p>{props.data.rotation}</p>
         </div>
         <div className="border-stats">
           <h3>REVOLUTION TIME</h3>
-          <p>{data.revolution}</p>
+          <p>{props.data.revolution}</p>
         </div>
         <div className="border-stats">
           <h3>RADIUS</h3>
-          <p>{data.radius}</p>
+          <p>{props.data.radius}</p>
         </div>
         <div className="border-stats">
           <h3>AVERAGE TEMP.</h3>
-          <p>{data.temperature}</p>
+          <p>{props.data.temperature}</p>
         </div>
       </div>
     </>
   )
 }
 
-export default Mercury
+export default Planet

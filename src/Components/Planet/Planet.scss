@@ -29,21 +29,39 @@
       padding-bottom: 20px;
     }
 
-    .active {
-      opacity: 0.5;
-      background: none;
-      border: none;
-      margin: 0px 20px 0px 0px;
-      font-family: var(--font-spartan);
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 2.6px;
-      line-height: 25px;
-      padding-bottom: 17px;
-
+    .mercury {
       opacity: 1;
       border-bottom: 3px solid #419ebb;
     }
+    .venus {
+      opacity: 1;
+      border-bottom: 3px solid #EDA249;
+    }
+    .earth {
+      opacity: 1;
+      border-bottom: 3px solid #6D2ED5;
+    }
+    .mars {
+      opacity: 1;
+      border-bottom: 3px solid #D14C32;
+    }
+    .jupiter {
+      opacity: 1;
+      border-bottom: 3px solid #D83A34;
+    }
+    .saturn {
+      opacity: 1;
+      border-bottom: 3px solid #CD5120;
+    }
+    .uranus {
+      opacity: 1;
+      border-bottom: 3px solid #1EC1A2;
+    }
+    .neptune {
+      opacity: 1;
+      border-bottom: 3px solid #2D68F0;
+    }
+
     :last-child {
       margin-right: 0;
     }
@@ -64,7 +82,7 @@
       width: 82px;
       top: 50px;
       left: 40px;
-      rotate: -45deg;
+      rotate: (-45deg);
     }
     .inide-img {
       height: 150px;
