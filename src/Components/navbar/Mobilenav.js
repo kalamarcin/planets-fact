@@ -4,7 +4,7 @@ import arrow from '../../assets/icon-chevron.svg'
 import { GlobalStoreContext } from '../../Store/GlobalStore'
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
-import data from '../../data.json'
+import   {data }  from '../../data'
 import './Mobilenav.scss'
 
 const Mobilenav = () => {
@@ -14,12 +14,8 @@ const Mobilenav = () => {
     GlobalStore.changeSidebar()
   }
 
- 
   return (
-    <motion.div
-      
-
-      className="mobile">
+    <motion.div className="mobile">
       <ul>
         {data.map((item, index) => {
           return (

@@ -27,6 +27,7 @@ const App = () => {
     GlobalStore.handleFalse()
   }
   const location = useLocation()
+  
   return (
     <div className="app">
       <div className="header">

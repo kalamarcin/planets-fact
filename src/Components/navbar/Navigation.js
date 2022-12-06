@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import data from '../../data.json'
+import { data } from '../../data'
 import './Navigation.scss'
 
 const Navigation = () => {
