@@ -1,12 +1,17 @@
 .planet-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 0.5fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "planet-nav"
+    "img-wrapper"
+    "box-title"; 
 
   .planet-nav {
-    height: 100%;
+    display: flex;
+    grid-area: planet-nav;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,6 +32,9 @@
       letter-spacing: 2.6px;
       line-height: 25px;
       padding-bottom: 20px;
+      .hidden {
+        display: none;
+      }
     }
 
     .mercury {
@@ -35,31 +43,31 @@
     }
     .venus {
       opacity: 1;
-      border-bottom: 3px solid #EDA249;
+      border-bottom: 3px solid #eda249;
     }
     .earth {
       opacity: 1;
-      border-bottom: 3px solid #6D2ED5;
+      border-bottom: 3px solid #6d2ed5;
     }
     .mars {
       opacity: 1;
-      border-bottom: 3px solid #D14C32;
+      border-bottom: 3px solid #d14c32;
     }
     .jupiter {
       opacity: 1;
-      border-bottom: 3px solid #D83A34;
+      border-bottom: 3px solid #d83a34;
     }
     .saturn {
       opacity: 1;
-      border-bottom: 3px solid #CD5120;
+      border-bottom: 3px solid #cd5120;
     }
     .uranus {
       opacity: 1;
-      border-bottom: 3px solid #1EC1A2;
+      border-bottom: 3px solid #1ec1a2;
     }
     .neptune {
       opacity: 1;
-      border-bottom: 3px solid #2D68F0;
+      border-bottom: 3px solid #2d68f0;
     }
 
     :last-child {
@@ -67,12 +75,14 @@
     }
   }
   .img-wrapper {
-    margin: 80px 0 80px;
-    height: 150px;
+    grid-area: img-wrapper;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 150px;
+  
     img {
+      margin-top: 20px;
       width: 150px;
       height: 100%;
     }
@@ -90,50 +100,53 @@
       position: absolute;
     }
   }
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    h1 {
-      font-family: var(--font-antonio);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 40px;
-      line-height: 52px;
+  .box-title {
+    grid-area: box-title;
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      h1 {
+        font-family: var(--font-antonio);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 52px;
+      }
     }
-  }
 
-  .desc {
-    h2 {
-      font-family: var(--font-spartan);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 25px;
-      text-align: center;
-      color: rgba($color: white, $alpha: 0.75);
-    }
-  }
-  .source {
-    letter-spacing: 1px;
-    margin-top: 20px;
-    justify-content: center;
-    font-family: var(--font-spartan);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 25px;
-    text-align: center;
-    color: rgba($color: white, $alpha: 0.5);
-    span {
-      font-family: var(--font-spartan);
-      font-style: normal;
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 25px;
-      opacity: 0.5;
-      margin-left: 4px;
+    .desc {
+      h2 {
+        font-family: var(--font-spartan);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 25px;
+        text-align: center;
+        color: rgba($color: white, $alpha: 0.75);
+      }
+      .source {
+        letter-spacing: 1px;
+        margin-top: 20px;
+        justify-content: center;
+        font-family: var(--font-spartan);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 25px;
+        text-align: center;
+        color: rgba($color: white, $alpha: 0.5);
+        span {
+          font-family: var(--font-spartan);
+          font-style: normal;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 25px;
+          opacity: 0.5;
+          margin-left: 4px;
+        }
+      }
     }
   }
 }
@@ -161,6 +174,157 @@
     }
     p {
       font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .planet-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      'img-wrapper img-wrapper'
+      'box-title planet-nav'
+      '. .';
+
+    .planet-nav {
+      margin-top: 80px;
+      height: 100%;
+      grid-area: planet-nav;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: none;
+      margin-left: 40px;
+
+      button {
+        
+        margin-bottom: 15px;
+        text-align: start;
+        width: 100%;
+        border: 1px solid #38384f;
+        padding: 10px 25px;
+        font-family: var(--font-spartan);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 2.6px;
+        line-height: 25px;
+        .hidden {
+          display: inline;
+      }
+      
+      }
+      .mercury {
+        opacity: 1;
+        border: none;
+        background-color: #419ebb;
+      }
+      .venus {
+        opacity: 1;
+        border: none;
+        background-color: #eda249;
+      }
+      .earth {
+        opacity: 1;
+        border: none;
+        background-color: #6d2ed5;
+      }
+      .mars {
+        opacity: 1;
+        border: none;
+        background-color: #d14c32;
+      }
+      .jupiter {
+        opacity: 1;
+        border: none;
+        background-color: #d83a34;
+      }
+      .saturn {
+        opacity: 1;
+        border: none;
+        background-color: #cd5120;
+      }
+      .uranus {
+        opacity: 1;
+        border: none;
+        background-color: #1ec1a2;
+      }
+      .neptune {
+        opacity: 1;
+        border: none;
+        background-color: #2d68f0;
+      }
+    }
+    .img-wrapper {
+      grid-area: img-wrapper;
+      margin: 80px 0 80px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 300px;
+        height: 300px;
+      }
+      .inside-all {
+      }
+      .inide-img {
+      }
+    }
+    .box-title {
+      grid-area: box-title;
+      display: flex;
+      flex-direction: column;
+      .title {
+        display: flex;
+        justify-content: flex-start;
+        text-transform: uppercase;
+      }
+
+      .desc {
+        display: inline;
+
+        h2 {
+          text-align: left;
+        }
+
+        .source {
+          text-align: left;
+
+          span {
+          }
+        }
+      }
+    }
+  }
+  .stats-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    .border-stats {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 25px;
+      border: 1px solid #38384f;
+      h3 {
+        color: rgba($color: white, $alpha: 0.5);
+        font-family: var(--font-spartan);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+      p {
+        font-size: 18px;
+      }
     }
   }
 }

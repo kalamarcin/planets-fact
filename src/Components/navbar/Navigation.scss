@@ -2,18 +2,25 @@
   display: none;
 }
 
-@media screen and (min-width: 800px) {
+@media (min-width: 768px) {
   .navigation-full {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
     ul {
-    
       li {
         display: inline;
         padding: 0px 20px;
-        
+
         a {
-            text-decoration: none;
-            cursor: pointer;
+          font-family: var(--font-spartan);
+          opacity: 0.75;
+          font-size: 14px;
+          letter-spacing: 1px;
+          text-decoration: none;
+         
         }
       }
     }

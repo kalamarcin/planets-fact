@@ -27,13 +27,13 @@ const Planet = props => {
       <div className="planet-grid">
         <div className="planet-nav">
           <button className={overview ? `${props.className}` : ''} onClick={changeClass1}>
-            OVERVIEW
+            <p className='hidden'>01</p> OVERVIEW
           </button>
           <button className={structure ? `${props.className}` : ''} onClick={changeClass2}>
-            STRUCTURE
+          <p className='hidden'>02</p> STRUCTURE
           </button>
           <button className={surface ? `${props.className}` : ''} onClick={changeClass3}>
-            SURFACE
+          <p className='hidden'>03</p> SURFACE
           </button>
         </div>
         <div className="img-wrapper">
@@ -42,6 +42,7 @@ const Planet = props => {
           {surface && <img className="inide-img" src={props.imgAll} alt="" />}
           {surface && <img className="inside-all" src={props.imgInside} alt="" />}
         </div>
+        <div className="box-title">
         <div className="title">
           <h1>{props.data.name}</h1>
         </div>
@@ -55,6 +56,7 @@ const Planet = props => {
               <a href={props.data.overview.source}> Wikipedia</a>
             </span>
           </h2>
+        </div>
         </div>
       </div>
       <div className="stats-grid">
