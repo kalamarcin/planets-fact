@@ -1,14 +1,17 @@
 import React from 'react'
-import sun from '../../assets/sun.png'
 import './Home.scss'
-import stars from '../../assets/boken.png'
+import { motion } from 'framer-motion'
+// import stars from '../../assets/boken.png'
+// import sun from '../../assets/sun.png'
 const Home = () => {
+  
   return (
     <div>
-      <div className="galaxy">
-        <img className="stars" src={stars} alt="" />
-        <img className="sun" src={sun} alt="" />
-      </div>
+      <motion.div
+       
+      className="galaxy">
+       
+      </motion.div>
     </div>
   )
 }

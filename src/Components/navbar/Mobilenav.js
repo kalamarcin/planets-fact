@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Mobilenav.scss'
 import arrow from '../../assets/icon-chevron.svg'
 import { GlobalStoreContext } from '../../Store/GlobalStore'
 import { useContext } from 'react'
+import { motion } from 'framer-motion'
 import data from '../../data.json'
+import './Mobilenav.scss'
 
 const Mobilenav = () => {
   const GlobalStore = useContext(GlobalStoreContext)
@@ -13,8 +14,12 @@ const Mobilenav = () => {
     GlobalStore.changeSidebar()
   }
 
+ 
   return (
-    <div className="mobile">
+    <motion.div
+      
+
+      className="mobile">
       <ul>
         {data.map((item, index) => {
           return (
@@ -28,7 +33,7 @@ const Mobilenav = () => {
           )
         })}
       </ul>
-    </div>
+    </motion.div>
   )
 }
 

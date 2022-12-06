@@ -1,8 +1,14 @@
-import React from 'react'
+import './Mercury.scss'
 
 const Mercury = () => {
   return (
-    <div>Mercury</div>
+    <>
+    <div className="planet-nav">
+    <button>OVERVIEW</button>
+    <button>STRUCTURE</button>
+    <button>SURFACE</button>
+    </div>
+    </>
   )
 }
 

@@ -1,0 +1,18 @@
+.planet-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    background: none;
+    border: none;
+    margin: 0px 20px 0px 0px;
+    font-family: var(--font-spartan);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2.6px;
+    line-height: 25px;
+  }
+  :last-child {
+    margin-right: 0;
+  }
+}

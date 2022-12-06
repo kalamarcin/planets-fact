@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import { useContext } from 'react'
 import { GlobalStoreContext } from './Store/GlobalStore'
 //pages
@@ -12,6 +12,7 @@ import Jupiter from './Pages/Jupiter/Jupiter'
 import Saturn from './Pages/Saturn/Saturn'
 import Uranus from './Pages/Uranus/Uranus'
 import Neptune from './Pages/Neptune/Neptune'
+import { AnimatePresence } from 'framer-motion'
 //styles
 import './styles/App.scss'
 import './styles/Header.scss'
@@ -25,6 +26,7 @@ const App = () => {
   const changeSidebarState = () => {
     GlobalStore.handleFalse()
   }
+  const location = useLocation()
   return (
     <div className="app">
       <div className="header">
@@ -36,7 +38,8 @@ const App = () => {
         <Navigation />
         <Navbar />
       </div>
-      <Routes>
+      <AnimatePresence> 
+      <Routes key={location.pathname} location={location}>
         <Route path="/mobile" element={<Mobilenav />} />
         <Route path="/" element={<Home />} />
         <Route path="/mercury" element={<Mercury />} />
@@ -48,6 +51,7 @@ const App = () => {
         <Route path="/uranus" element={<Uranus />} />
         <Route path="/neptune" element={<Neptune />} />
       </Routes>
+      </AnimatePresence>
     </div>
   )
 }
