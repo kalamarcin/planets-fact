@@ -50,13 +50,26 @@
   }
   .img-wrapper {
     margin: 80px 0 80px;
-    
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     img {
       width: 150px;
       height: 100%;
+    }
+    .inside-all {
+      position: relative;
+      height: 100px;
+      width: 82px;
+      top: 50px;
+      left: 40px;
+      rotate: -45deg;
+    }
+    .inide-img {
+      height: 150px;
+      width: 150px;
+      position: absolute;
     }
   }
   .title {
@@ -127,7 +140,6 @@
       font-weight: 700;
       font-size: 11px;
       letter-spacing: 1px;
-      
     }
     p {
       font-size: 18px;

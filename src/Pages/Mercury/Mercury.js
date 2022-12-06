@@ -43,7 +43,8 @@ const Mercury = () => {
         <div className="img-wrapper">
           {overview && <img src={mercuryAll} alt="" />}
           {structure && <img src={mercuryHalf} alt="" />}
-          {surface && <img src={mercuryInside} alt="" />}
+          {surface && <img className='inide-img' src={mercuryAll} alt="" />}
+          {surface && <img className='inside-all' src={mercuryInside} alt="" />}
         </div>
         <div className="title">
           <h1>{data.name.toUpperCase()}</h1>
