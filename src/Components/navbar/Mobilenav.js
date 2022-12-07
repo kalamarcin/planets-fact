@@ -4,7 +4,7 @@ import arrow from '../../assets/icon-chevron.svg'
 import { GlobalStoreContext } from '../../Store/GlobalStore'
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
-import   {data }  from '../../data'
+import { data } from '../../data'
 import './Mobilenav.scss'
 
 const Mobilenav = () => {
@@ -13,9 +13,21 @@ const Mobilenav = () => {
   const changeState = () => {
     GlobalStore.changeSidebar()
   }
-
+  const nextVariants = {
+    hidden: {
+      x: '100vw',
+    },
+    visible: {
+      x: 0,
+      transition: { duration: 0.6, stiffness: 120 },
+    },
+    exit: { 
+      x: '100vw',
+      transition: { duration: 0.6, stiffness: 120 }
+   },
+  }
   return (
-    <motion.div className="mobile">
+    <motion.div variants={nextVariants} initial="hidden" animate="visible" exit="exit" className="mobile">
       <ul>
         {data.map((item, index) => {
           return (

@@ -59,7 +59,7 @@ const App = () => {
         <Navigation />
         <Navbar />
       </div>
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <Routes key={location.pathname} location={location}>
           <Route path="/mobile" element={<Mobilenav />} />
           <Route path="/" element={<Home />} />

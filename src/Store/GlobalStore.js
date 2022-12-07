@@ -1,7 +1,7 @@
 import { useState, createContext } from 'react'
 
 export const GlobalStoreContext = createContext({
-  theme: '',
+  sidebar: '',
   changeSidebar: () => {},
   handleFalse: () => {},
 })
