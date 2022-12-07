@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { data } from '../../data'
-import './Navigation.scss'
+import '../../styles/Header.scss'
 
 const Navigation = () => {
   return (

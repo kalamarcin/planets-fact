@@ -1,8 +1,10 @@
 .mobile {
   display: flex;
-
+  
   ul {
+    
     width: 100%;
+    margin-top: 10px;
 
     li {
       display: flex;
@@ -60,7 +62,7 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .mobile {
     display: none;
   }

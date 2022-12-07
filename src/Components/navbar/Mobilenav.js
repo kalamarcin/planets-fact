@@ -15,15 +15,15 @@ const Mobilenav = () => {
   }
   const nextVariants = {
     hidden: {
-      x: '100vw',
+      x: 400,
     },
     visible: {
       x: 0,
-      transition: { duration: 0.6, stiffness: 120 },
+      transition: { duration: 0.5, stiffness: 120 },
     },
     exit: { 
-      x: '100vw',
-      transition: { duration: 0.6, stiffness: 120 }
+      x: 400,
+      transition: { duration: 0.5, stiffness: 120 }
    },
   }
   return (

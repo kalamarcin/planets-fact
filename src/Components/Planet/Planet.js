@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion'
+import {  motion } from 'framer-motion'
 import { useState } from 'react'
+
+
 
 import './Planet.scss'
 
@@ -36,11 +38,14 @@ const Planet = props => {
       transition: { duration: 0.4, stiffness: 120 },
     },
   }
+  
 
   return (
+    
     <motion.div variants={nextVariants} initial="hidden" animate="visible" exit="exit">
       <div className="planet-grid">
         <div className="planet-nav">
+       
           <button className={overview ? `${props.className}` : ''} onClick={changeClass1}>
             <p className="hidden">01</p> OVERVIEW
           </button>
@@ -50,17 +55,22 @@ const Planet = props => {
           <button className={surface ? `${props.className}` : ''} onClick={changeClass3}>
             <p className="hidden">03</p> SURFACE
           </button>
+          
+          
         </div>
 
         <div className="img-wrapper">
-          {overview && <img src={props.imgAll} alt="" />}
-          {structure && <img src={props.imgHalf} alt="" />}
+        
+          {overview &&  <img src={props.imgAll} alt="" />}
+          {structure &&  <img src={props.imgHalf} alt="" />}
           {surface && (
             <>
               <img className="inide-img" src={props.imgAll} alt="" />
               <img className="inside-all" src={props.imgInside} alt="" />
+              
             </>
           )}
+        
         </div>
 
         <div className="box-title">
@@ -99,6 +109,7 @@ const Planet = props => {
         </div>
       </div>
     </motion.div>
+    
   )
 }
 
