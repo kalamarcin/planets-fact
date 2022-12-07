@@ -1,4 +1,4 @@
-![](src/assets/preview.png)
+![](https://github.com/kalamarcin/planets-fact/blob/master/src/assets/preview.jpg?raw=true)
 
 
 ## Overview
