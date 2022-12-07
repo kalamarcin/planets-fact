@@ -1,1 +1,80 @@
+.wrapper {
+  height: 600px;
+  margin-top: 50px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  .button-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      text-decoration: none;
+
+      gap: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: none;
+      border: none;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 20px 30px;
+      font-family: var(--font-spartan);
+      font-size: 22px;
+      .rocket {
+        width: 50px;
+      }
+      .animateRocket {
+        width: 50px;
+        animation: 5s infinite;
+        animation-name: animate-rocket;
+      }
+
+      @keyframes animate-rocket {
+        0% {
+          transform: rotate(-10deg);
+        }
+        25% {
+          transform: rotate(10deg);
+        }
+        50% {
+          transform: rotate(-10deg);
+        }
+        75% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(-10deg);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    .button-box {
+      button {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .wrapper {
+    height: 1000px;
+    .button-box {
+      button {
+        cursor: pointer;
+        font-size: 30px;
+        &:hover {
+        }
+      }
+    }
+  }
+}

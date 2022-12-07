@@ -1,17 +1,23 @@
-import React from 'react'
+
 import './Home.scss'
-import { motion } from 'framer-motion'
-// import stars from '../../assets/boken.png'
-// import sun from '../../assets/sun.png'
+
+import rocket from '../../assets/rocket.png'
+
+import { Link } from 'react-router-dom'
+
 const Home = () => {
+ 
   
   return (
     <div>
-      <motion.div
-       
-      className="galaxy">
-       
-      </motion.div>
+      <div className="wrapper">
+        <div className="button-box">
+          <Link to={'/mercury'}>
+            <img src={rocket} alt="" className='animateRocket' />
+            LET'S START!
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

@@ -17,7 +17,7 @@
       align-items: center;
       justify-content: center;
       display: flex;
-      margin-bottom: 10px;
+     
       ul {
         li {
           display: inline;
@@ -53,7 +53,16 @@
     
 
     .navigation-full {
-      
+      ul {
+        align-items: center;
+        
+        li{
+          a{
+            
+            font-size: 16px;
+          }
+        }
+      }
 
     }
     .title {
