@@ -11,6 +11,8 @@ import rocket from '../../assets/rocket.png'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import sun from '../../assets/sun.png'
+import Tippy from '@tippyjs/react'
+
 
 const Home = () => {
   const nextVariants = {
@@ -31,7 +33,7 @@ const Home = () => {
       <div>
         <div className="wrapper">
           <div className="button-box">
-              <img src={rocket} alt="" className="animateRocket" />
+            <img src={rocket} alt="" className="animateRocket" />
             <Link to={'/mercury'}>
               <h1>LET'S START!</h1>
             </Link>
@@ -40,36 +42,45 @@ const Home = () => {
       </div>
       <div className="solar">
         <img className="sun" src={sun} alt="" />
-        <Link to="/mercury">
-          
-          <img className="mercury-img" src={mercury} alt="" />
+        <Link  to="/mercury">
+          <Tippy content={<div className='tippy'><h1>Mercury</h1></div>}>
+          <img  className="mercury-img" src={mercury} alt="" />
+          </Tippy>
         </Link>
         <Link to="/venus">
-          
+        <Tippy content={<div className='tippy'><h1>Venus</h1></div>}>
           <img className="venus-img" src={venus} alt="" />
+          </Tippy>
         </Link>
         <Link to="/earth">
-          
+        <Tippy content={<div className='tippy'><h1>earth</h1></div>}>
           <img className="earth-img" src={earth} alt="" />
+          </Tippy>
         </Link>
         <Link to="/mars">
-          
+        <Tippy content={<div className='tippy'><h1>mars</h1></div>}>
           <img className="mars-img" src={mars} alt="" />
+          </Tippy>
         </Link>
         <Link to="/jupiter">
-          {' '}
+        <Tippy content={<div className='tippy'><h1>jupiter</h1></div>}>
           <img className="jupiter-img" src={jupiter} alt="" />
+          </Tippy>
         </Link>
         <Link to="/saturn">
-          {' '}
+        <Tippy content={<div className='tippy'><h1>saturn</h1></div>}>
           <img className="saturn-img" src={saturn} alt="" />
+          </Tippy>
         </Link>
         <Link to="/uranus">
-          {' '}
+        <Tippy content={<div className='tippy'><h1>uranus</h1></div>}>
           <img className="uranus-img" src={uranus} alt="" />
+          </Tippy>
         </Link>
         <Link to="/neptune">
+        <Tippy content={<div className='tippy'><h1>neptune</h1></div>}>
           <img className="neptune-img" src={neptune} alt="" />
+          </Tippy>
         </Link>
       </div>
     </motion.div>
