@@ -12,14 +12,13 @@
     flex-direction: column;
     gap: 60px;
     a {
-      gap: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       background: none;
       text-decoration: none;
-     
+      -webkit-tap-highlight-color: transparent;
 
       h1 {
         font-weight: 700;
@@ -27,17 +26,15 @@
         font-family: var(--font-spartan);
         font-size: 22px;
         padding: 40px 50px;
-        margin-top: 40px;
+
         border: 1px solid white;
         border-radius: 20px;
         transition: 0.4s;
+
         &:active {
           background-color: #6d2ed5;
         }
-        
       }
-
-      
     }
     .animateRocket {
       width: 50px;
@@ -91,8 +88,7 @@
     }
   }
   .solar {
-    
-    height: calc(100vh - 200px) ;
+    height: calc(100vh - 200px);
     display: flex;
     width: 100%;
     align-items: center;
@@ -106,7 +102,6 @@
       width: 600px;
       filter: blur(70px);
     }
-    
 
     a {
       .mercury-img {
