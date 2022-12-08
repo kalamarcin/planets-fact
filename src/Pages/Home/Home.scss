@@ -1,6 +1,6 @@
 .wrapper {
-  height: 600px;
-  margin-top: 50px;
+  height: 70vh;
+  
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -11,8 +11,8 @@
     align-items: center;
     justify-content: center;
     a {
+      
       text-decoration: none;
-
       gap: 60px;
       display: flex;
       align-items: center;
@@ -25,6 +25,20 @@
       padding: 20px 30px;
       font-family: var(--font-spartan);
       font-size: 22px;
+      
+      h1 {
+        
+        
+        font-size: 22px;
+        padding: 40px 50px;
+        margin-top: 40px;
+        border: 2px solid white;
+        border-radius: 20px;
+        transition: 0.4s;
+        &:active {
+          background-color: #6d2ed5;
+        }
+      }
       .rocket {
         width: 50px;
       }
@@ -54,6 +68,9 @@
     }
   }
 }
+.solar {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .wrapper {
@@ -67,6 +84,7 @@
 
 @media (min-width: 1025px) {
   .wrapper {
+    display: none;
     height: 1000px;
     .button-box {
       button {
@@ -77,4 +95,65 @@
       }
     }
   }
+  .solar {
+    
+    margin-top: 80px;
+    margin-left: 30px;
+    .sun {
+      position:absolute;
+      left: -480px;
+      height: 800px;
+      width: 600px;
+      filter: blur(70px);
+    }
+    margin-top: 60px;
+    border-radius: -50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-left: 6px  yellow;
+    
+    height: 50rem;
+    gap: 5%;
+    
+
+    a {
+      .mercury-img {
+        height: 20px;
+      }
+      .venus-img {
+        height: 50px;
+      }
+      .earth-img {
+        height: 60px;
+      }
+      .mars-img {
+        height: 20px;
+      }
+      .jupiter-img {
+        height: 130px;
+      }
+      .saturn-img {
+        height: 190px;
+      }
+      .uranus-img {
+        height: 90px;
+      }
+      .neptune-img {
+        height: 90px;
+      }
+      
+      img {
+        
+        cursor: pointer;
+        transition: scale 1s;
+        &:hover {
+          scale: 1.6;
+        }
+      }
+      
+    }
+    
+  }
+  
 }
