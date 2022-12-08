@@ -20,6 +20,7 @@ const Navbar = () => {
   const closeSidebar = () => {
     GlobalStore.changeSidebar()
     navigate(-1)
+    GlobalStore.handleFalse()
   }
 
   return (
