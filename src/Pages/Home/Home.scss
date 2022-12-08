@@ -1,6 +1,5 @@
 .wrapper {
   height: 70vh;
-  
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -10,60 +9,57 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 60px;
     a {
-      
-      text-decoration: none;
       gap: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       background: none;
-      border: none;
-      font-weight: 700;
-      letter-spacing: 2px;
-      padding: 20px 30px;
-      font-family: var(--font-spartan);
-      font-size: 22px;
-      
+      text-decoration: none;
+     
+
       h1 {
-        
-        
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-family: var(--font-spartan);
         font-size: 22px;
         padding: 40px 50px;
         margin-top: 40px;
-        border: 2px solid white;
+        border: 1px solid white;
         border-radius: 20px;
         transition: 0.4s;
         &:active {
           background-color: #6d2ed5;
         }
-      }
-      .rocket {
-        width: 50px;
-      }
-      .animateRocket {
-        width: 50px;
-        animation: 5s infinite;
-        animation-name: animate-rocket;
+        
       }
 
-      @keyframes animate-rocket {
-        0% {
-          transform: rotate(-10deg);
-        }
-        25% {
-          transform: rotate(10deg);
-        }
-        50% {
-          transform: rotate(-10deg);
-        }
-        75% {
-          transform: rotate(10deg);
-        }
-        100% {
-          transform: rotate(-10deg);
-        }
+      
+    }
+    .animateRocket {
+      width: 50px;
+      animation: 5s infinite;
+      animation-name: animate-rocket;
+    }
+
+    @keyframes animate-rocket {
+      0% {
+        transform: rotate(-10deg);
+      }
+      25% {
+        transform: rotate(10deg);
+      }
+      50% {
+        transform: rotate(-10deg);
+      }
+      75% {
+        transform: rotate(10deg);
+      }
+      100% {
+        transform: rotate(-10deg);
       }
     }
   }
@@ -85,7 +81,6 @@
 @media (min-width: 1025px) {
   .wrapper {
     display: none;
-    height: 1000px;
     .button-box {
       button {
         cursor: pointer;
@@ -97,24 +92,20 @@
   }
   .solar {
     
-    margin-top: 80px;
+    height: calc(100vh - 200px) ;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
     margin-left: 30px;
     .sun {
-      position:absolute;
+      position: absolute;
       left: -480px;
-      height: 800px;
+      height: 100%;
       width: 600px;
       filter: blur(70px);
     }
-    margin-top: 60px;
-    border-radius: -50px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    border-left: 6px  yellow;
-    
-    height: 50rem;
-    gap: 5%;
     
 
     a {
@@ -142,18 +133,14 @@
       .neptune-img {
         height: 90px;
       }
-      
+
       img {
-        
         cursor: pointer;
         transition: scale 1s;
         &:hover {
           scale: 1.6;
         }
       }
-      
     }
-    
   }
-  
 }

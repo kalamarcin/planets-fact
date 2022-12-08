@@ -31,25 +31,46 @@ const Home = () => {
       <div>
         <div className="wrapper">
           <div className="button-box">
-            <Link to={'/mercury'}>
               <img src={rocket} alt="" className="animateRocket" />
+            <Link to={'/mercury'}>
               <h1>LET'S START!</h1>
-              
             </Link>
           </div>
         </div>
       </div>
       <div className="solar">
-
-      <img className='sun' src={sun} alt="" />
-       <Link to='/mercury'> <img className='mercury-img' src={mercury} alt="" /></Link>
-       <Link to='/venus'> <img className='venus-img' src={venus} alt="" /></Link>
-       <Link to='/earth'> <img className='earth-img' src={earth} alt="" /></Link>
-       <Link to='/mars'> <img className='mars-img' src={mars} alt="" /></Link>
-       <Link to='/jupiter'> <img className='jupiter-img' src={jupiter} alt="" /></Link>
-       <Link to='/saturn'> <img className='saturn-img' src={saturn} alt="" /></Link>
-       <Link to='/uranus'> <img className='uranus-img' src={uranus} alt="" /></Link>
-       <Link to='/neptune'><img className='neptune-img' src={neptune} alt="" /></Link>
+        <img className="sun" src={sun} alt="" />
+        <Link to="/mercury">
+          
+          <img className="mercury-img" src={mercury} alt="" />
+        </Link>
+        <Link to="/venus">
+          
+          <img className="venus-img" src={venus} alt="" />
+        </Link>
+        <Link to="/earth">
+          
+          <img className="earth-img" src={earth} alt="" />
+        </Link>
+        <Link to="/mars">
+          
+          <img className="mars-img" src={mars} alt="" />
+        </Link>
+        <Link to="/jupiter">
+          {' '}
+          <img className="jupiter-img" src={jupiter} alt="" />
+        </Link>
+        <Link to="/saturn">
+          {' '}
+          <img className="saturn-img" src={saturn} alt="" />
+        </Link>
+        <Link to="/uranus">
+          {' '}
+          <img className="uranus-img" src={uranus} alt="" />
+        </Link>
+        <Link to="/neptune">
+          <img className="neptune-img" src={neptune} alt="" />
+        </Link>
       </div>
     </motion.div>
   )
