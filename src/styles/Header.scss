@@ -54,9 +54,12 @@
     .navigation-full {
       ul {
         align-items: center;
+        
 
         li {
+         
           .mercury.active {
+            
             border-top: 4px solid #419ebb;
             opacity: 1;
           }
