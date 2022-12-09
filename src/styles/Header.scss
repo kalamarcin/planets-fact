@@ -17,7 +17,7 @@
       align-items: center;
       justify-content: center;
       display: flex;
-     
+
       ul {
         li {
           display: inline;
@@ -50,20 +50,50 @@
     height: 100px;
     align-items: center;
     margin-bottom: 0px;
-    
 
     .navigation-full {
       ul {
         align-items: center;
-        
-        li{
-          a{
-            
+
+        li {
+          .mercury.active {
+            border-top: 4px solid #419ebb;
+            opacity: 1;
+          }
+          .venus.active {
+            border-top: 4px solid #eda249;
+            opacity: 1;
+          }
+          .earth.active {
+            border-top: 4px solid #6d2ed5;
+            opacity: 1;
+          }
+          .mars.active {
+            border-top: 4px solid #d14c32;
+            opacity: 1;
+          }
+          .jupiter.active {
+            border-top: 4px solid #d83a34;
+            opacity: 1;
+          }
+          .saturn.active {
+            border-top: 4px solid #cd5120;
+            opacity: 1;
+          }
+          .uranus.active {
+            border-top: 4px solid #1ec1a2;
+            opacity: 1;
+          }
+          .neptune.active {
+            border-top: 4px solid #2d68f0;
+            opacity: 1;
+          }
+          a {
+            padding-top: 42px;
             font-size: 16px;
           }
         }
       }
-
     }
     .title {
       justify-content: center;
